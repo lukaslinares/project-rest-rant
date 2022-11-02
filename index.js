@@ -4,6 +4,7 @@ const app = express()
 
 app.use('/places', require('./controllers/places'))
 
+//Home Route
 app.get('/', (req, res) => {
     res.send('Hello world!')
 })

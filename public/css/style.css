@@ -9,15 +9,15 @@ main {
   background-color: white;
 }
 
-h1 {
+h1, h2 {
     text-align: center;
     color: cornflowerblue;
   }
 
 /* Not Nessacary */
 img{
-    width: 600px;
-    height: 600px;
+    width: 400px;
+    height: 400px;
 }
 
 nav {

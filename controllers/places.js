@@ -29,7 +29,6 @@ router.get('/:id', (req, res) => {
 
 //POST
 router.post('/', (req, res) => {
-  console.log(req.body)
   if (!req.body.pic) {
     // Default image if one is not provided
     req.body.pic = 'http://placekitten.com/400/400'

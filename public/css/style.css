@@ -1,5 +1,5 @@
 body {
-  background-color: lightblue;
+  background-color: #7CB0B6;
   text-align: center;
 }
 
@@ -9,19 +9,24 @@ main {
   background-color: white;
 }
 
-h1, h2 {
+h1{
     text-align: center;
-    color: cornflowerblue;
+    color: #071E22;
   }
+
+h2{
+  text-align: center;
+  color:#7CB0B6;
+}
 
 /* Not Nessacary */
 img{
-    width: 400px;
+    width: 500px;
     height: 400px;
 }
 
 nav {
-  background-color: cornflowerblue;
+  background-color: #071E22;
   padding: 10px;
 }
 
@@ -43,4 +48,9 @@ nav a {
 nav a:hover {
   color: pink;
   text-decoration: none;
+}
+
+.bor{
+  border: 1px;
+  color: red;
 }

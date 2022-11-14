@@ -9,5 +9,8 @@ const placeSchema = new mongoose.Schema({
   founded: Number
 })
 
+placeSchema.methods.showEstablished = function() {}
+
 module.exports = mongoose.model('Place', placeSchema)
+
 

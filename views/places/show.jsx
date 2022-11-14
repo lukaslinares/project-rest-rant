@@ -10,12 +10,18 @@ function show (data) {
                 <div class="col-sm-6 mt-3">          
                   <img src={data.place.pic} alt={data.place.name} />
                 </div>
+                <p>Located in {data.place.city}, {data.place.state} and serving {data.place.cuisines} </p>
                 <div class="col-sm-6 mt-3">
                   <h1>{data.place.name}</h1>
                   <h2>Rating</h2>
                   <p>Not Rated</p>
                   <h2>Description</h2>
-                  <p>Located in {data.place.city}, {data.place.state} and serving {data.place.cuisines} </p>
+                  <h3>
+                    {data.place.showEstablished()}
+                  </h3>
+                  <h4>
+                    Serving {data.place.cuisines}
+                  </h4>
                   <div className="btn-container pt-3">
                     <div className='d-flex flex-column'>
                       <div className='col pb-2'>

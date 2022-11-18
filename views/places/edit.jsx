@@ -1,7 +1,7 @@
 const React = require('react')
 const Def = require('../default.jsx')
 
-function edit_form (data) {
+function Edit ({data}) {
     return (
         <Def>
              <form method="POST" action={`/places/${data.id}?_method=PUT`}>
@@ -82,5 +82,5 @@ function edit_form (data) {
     )
 }
 
-module.exports = edit_form
+module.exports = Edit
 

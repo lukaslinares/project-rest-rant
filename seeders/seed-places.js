@@ -1,6 +1,6 @@
 const db = require('../models')
 
-db.Place.create([{
+const seedPlace = db.Place.create([{
     name: 'H-Thai-ML',
     city: 'Seattle',
     state: 'WA',
@@ -23,3 +23,5 @@ db.Place.create([{
     console.log('Failure!', err)
     process.exit()
 })
+
+module.exports = seedPlace

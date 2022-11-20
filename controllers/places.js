@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
     })
 })
 
-//CREATE +
+//CREATE PLACE +
 router.post('/', (req, res) => {
   if (!req.body.pic) {
     // Default image if one is not provided
@@ -30,7 +30,7 @@ router.post('/', (req, res) => {
   })
 })
 
-//NEW
+//NEW PLACE
 router.get('/new', (req, res) => {
   res.render('places/new')
 })
@@ -64,7 +64,7 @@ router.put('/:id', (req, res) => {
 //DELETE PLACES +(?)
 router.delete('/:id', (req, res) => {
   Places.findByIdAndDelete(req.params.id)
-    .then(() => {
+    .then(place => {
       res.redirect('/places')
     })
     .catch(err => {
@@ -73,20 +73,18 @@ router.delete('/:id', (req, res) => {
   })
 })
 
-//EDIT +(?)
+//EDIT PLACE (?)
 router.get('/:id/edit', (req, res) => {
-  Places.findById(req.params.id) 
-    .then(foundPlace => { 
-      res.render('edit', {
-        place: foundPlace,
-      })
-    })
-    .catch(err => {
+  Places.findById(req.params.id)
+  .then(place => {
+      res.render('places/edit', { place })
+  })
+  .catch(err => {
       res.render('error404')
   })
 })
 
-//CREATE 
+//CREATE COMMENT
 router.post('/:id/comment', (req, res) => {
   console.log(req.body)
   db.Place.findById(req.params.id)
@@ -108,7 +106,7 @@ router.post('/:id/comment', (req, res) => {
   })
 })
 
-//DELETE
+//DELETE COMMENT
 router.delete('/:id/rant/:rantId', (req, res) => {
     res.send('GET /places/:id/rant/:rantId stub')
 })
